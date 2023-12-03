@@ -8,6 +8,15 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.roomsiswa.AplikasiSiswa
 
 object PenyediaViewModel{
+
+    val Factory = viewModelFactory {
+        initializer {
+            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+        initializer {
+            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+        }
+    }
     /**
      * Fungsi ekstensi query untuk objek Application dan mengembalikan sebuah instance dari AplikasiSiswa
      */
