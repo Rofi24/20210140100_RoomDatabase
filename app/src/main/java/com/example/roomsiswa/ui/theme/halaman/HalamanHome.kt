@@ -37,6 +37,7 @@ import com.example.roomsiswa.data.Siswa
 import com.example.roomsiswa.model.HomeViewModel
 import com.example.roomsiswa.model.PenyediaViewModel.Factory
 import com.example.roomsiswa.navigasi.DestinasiNavigasi
+import com.example.roomsiswa.navigasi.SiswaTopAppBar
 
 object DestinasiHome : DestinasiNavigasi{
     override val route = "home"
@@ -54,6 +55,12 @@ fun HomeScreen(
 
     Scaffold(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+                 SiswaTopAppBar(
+                     title = stringResource(DestinasiHome.titleRes),
+                     canNavigateBack = false,
+                     scrollBehavior = scrollBehavior)
+        },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = navigateToItemEntry,
