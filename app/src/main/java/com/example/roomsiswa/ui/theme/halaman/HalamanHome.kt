@@ -12,3 +12,8 @@ object DestinasiHome : DestinasiNavigasi{
     override val titleRes = R.string.app_name
 }
 
+@Composable
+fun DataSiswa(
+    siswa: Siswa,
+    modifier: Modifier = Modifier
+){}
